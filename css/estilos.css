@@ -1,0 +1,389 @@
+*{
+  font-family: 'Goldman', cursive;
+
+}
+
+/*   Titulo  */
+.titulo{
+  font-family: 'Goldman', cursive;
+  text-align: center;
+  color: #000000;
+  font-size: 30px;
+  margin-top: 20px;
+}
+ #text5{
+  text-align:center;
+  text-shadow: #fff 10px 10px 5px , #00f 20px 20px 5px, -10px -10px 5px #f00;
+}
+/* Cargando */
+#load {
+  position:absolute;
+  width:600px;
+  height:36px;
+  left:50%;
+  top:40%;
+  margin-left:-300px;
+  overflow:visible;
+  -webkit-user-select:none;
+  cursor:default;
+}
+
+#load div {
+  position:absolute;
+  width:20px;
+  height:36px;
+  opacity:0;
+  font-family:Helvetica, Arial, sans-serif;
+  -webkit-animation:move 2s linear infinite;
+  -webkit-transform:rotate(180deg);
+  color:#35C4F0;
+}
+
+#load div:nth-child(2) {-webkit-animation-delay:0.1s;}
+#load div:nth-child(3) {-webkit-animation-delay:0.2s;}
+#load div:nth-child(4) {-webkit-animation-delay:0.3s;}
+#load div:nth-child(5) {-webkit-animation-delay:0.4s;}
+#load div:nth-child(6) {-webkit-animation-delay:0.5s;}
+#load div:nth-child(7) {-webkit-animation-delay:0.6s;}
+#load div:nth-child(8) {-webkit-animation-delay:0.7s;}
+
+@keyframes move {
+  0% {
+    left:0;
+    opacity:0;
+  }
+  35% {
+    left: 41%; 
+    -webkit-transform:rotate(0deg);
+    opacity:1;
+  }
+  65% {
+    left:59%; 
+    -webkit-transform:rotate(0deg); 
+    opacity:1;
+  }
+  100% {
+    left:100%; 
+    -webkit-transform:rotate(-180deg); 
+    opacity:0;
+  }
+}
+
+@-webkit-keyframes move {
+  0% {
+    left:0; 
+    opacity:0;
+  }
+  35% {
+    left:41%; 
+    -webkit-transform:rotate(0deg); 
+    transform:rotate(0deg); 
+    opacity:1;
+  }
+  65% {
+    left:59%; 
+    -webkit-transform:rotate(0deg); 
+    transform:rotate(0deg); 
+    opacity:1;
+  }
+  100% {
+    left:100%;
+    -webkit-transform:rotate(-180deg); 
+    transform:rotate(-180deg); 
+    opacity:0;
+  }
+}
+.todo{
+  background:#000;
+}
+
+/*  ---  Quienes Somos ---  */
+.cuerpo-historia{
+    font-size: 16px;
+    padding-bottom: 10px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contenido-textos{
+  margin-left: 100px;
+  margin-right: 50px;
+}
+.contenido-textos p span{
+  background: #CC0000;
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  width: 30px;
+  height: 25px;
+  padding: 2px;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,5);
+  margin-right: 20px;
+}
+.foto-detalle{
+    height: 80%;
+    width: 70%;
+}
+
+/*   Directivos  */
+
+*, *:after, *:before {
+  box-sizing: border-box;
+  font-family: 'Goldman', cursive;
+}
+
+.contenedor-fondo-direc{
+  height: 80%;
+  position: relative;
+  background-image: url('../img/FondoDirectivos.png');
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+}
+
+
+.thumbnail {
+  margin-left: 50px;
+  margin-right: 50px;
+  -webkit-backface-visibility: hidden;
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 15px 50px rgba(0,0,0,.5);
+}
+.thumbnail img {
+  display: block;
+  max-width: 10%;
+  transition: opacity .2s ease-in-out;
+}
+.thumbnail:hover img {
+  opacity: .5;
+}
+.thumbnail::after,
+.thumbnail::before {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 50%;
+  transition: transform .4s ease-out;
+  color: #fff;
+}
+.thumbnail::after {
+  content: attr(data-title);
+  top: 0;
+  padding-top: 55px;
+  transform: translateY(-100%) scale(.8);
+  background: rgba(0,0,0,.4);
+  font-size: 3.5rem;
+  font-weight: 300;
+  font-family: 'Goldman', cursive;
+  text-align: center;
+}
+.thumbnail::before {
+  content: attr(data-description) "…";
+  top: 50%;
+  padding: 20px;
+  transform: translateY(100%) scale(.8);
+  background: rgba(0, 100%, 50%, .5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: #f1f1f1;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.thumbnail:hover::after,
+.thumbnail:hover::before {
+  transform: translateY(0%) scale(1);
+}
+#direc-centro{
+    margin-left: 35%;
+    margin-right: 40%;
+}
+
+/* Orientaciones */
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+body{
+  margin: 0;
+  padding: 0;
+}
+ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex: direction: row;
+  text-align: center;
+  justify-content: space-around;
+}
+
+li{
+  list-style-type: none;
+  margin: 40px;
+}
+.imagen{
+  width: 200px;
+  height: 200px;
+  transform: rotate(45deg);
+}
+figure{
+  overflow: hidden;
+}
+
+figcaption{
+  font-family: 'Goldman', cursive;
+  text-shadow: 1px 1px 1px #111111;
+  transform: rotate(-45deg);
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 70px;
+  left: 45px;
+}
+
+.imgDir{
+  transform: rotate(-45deg);
+  margin-top: -100px;
+  margin-left: -50px;
+  height: 190%;
+  transition: 0.5s;
+  filter: blur(4px);
+}
+
+.imagen .imgDir:hover{
+    filter: blur(0px);
+}
+.first{
+  margin-top: 500px;
+  max-width: 1280px; 
+  margin-top: 35px;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.second{
+  max-width: 863px; 
+  margin-top: -170px;
+  width: 75%;
+  margin-left: 13%;
+  margin-right: auto;
+}
+
+.third{
+  max-width: 922px; 
+  margin-top: -170px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Orienta2*/
+
+
+.contenedor-o{
+  background-image: url('../img/fondo6.jpg');
+  height: 80%;
+  position: relative;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  overflow: hidden;
+}
+
+.contenedor{
+  width: 90%;
+  overflow: hidden;
+}
+#contenedor-direc {
+  width: 10px;
+  margin: center;
+  font-family: 'Goldman', cursive;
+}
+.galeria-port{
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.imagen-port{
+  width: 44%;
+  margin-bottom: 10px;
+  margin-left: 40px;
+  margin-right: 20px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+  padding: 0 10px 0 10px;
+}
+
+.imagen-port > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hover-galeria>p{
+  padding: 0px 0px 10px 10px;
+  font-weight: 500;
+  text-align: justify;
+}
+
+.hover-galeria{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transform: scale(0);
+  background: hsla(0, 100%, 50%, .5);
+  transition: transform .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hover-galeria img{
+  width: 50px;
+}
+
+.hover-galeria p{
+  color: #FFFFFF;
+}
+.imagen-port:hover .hover-galeria{
+  transform: scale(1);
+}
+
+
+/*Novedades*/
+
+.conten-nov{
+  margin-left: 30%;
+  background-image: url('../img/fondo6.png');
+  height: 40%;
+  width: 40%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  overflow: hidden;
+}
+
+/*  Footer  */
+.jumbotron{
+}
+.content-foo1{
+  margin-left: 40px;
+  margin-right: 60%;
+}
+.content-foo1{
+  margin-left: 20px;
+  margin-right: 60%;
+}
+
+
